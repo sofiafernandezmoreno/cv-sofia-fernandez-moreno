@@ -9,7 +9,7 @@ about: Hi, my name is Sofía Fernández Moreno. I'm just about the most boring t
        monitoring and living in the new era of the Cloud. I am not a robot. Please hire me.
 
        
-position: Junior DevOps Engineer
+position: Senior DevOps Engineer / SRE Platform
 
 birth:
   location: Madrid
@@ -58,7 +58,7 @@ experience:
   website: https://www.ibm.com/es-es
 
 - company: Kyndryl (Startup by IBM)
-  position: Junior DevOps Engineer
+  position: Senior DevOps Engineer / SRE Platform Engineer
   timeperiod: September 2021 - now
   description: Management, monitoring, logging, alert and administration of the tools used within the life cycle of the
                   applications and the platform, the tools used are all Prometheus Stack and Elastic Stack. Also provisioning all the infraestructure from DevOps Department with Ansible and managing the same
@@ -78,7 +78,7 @@ education:
 skills:
 - name: Bash, Python, C++, Ruby, Groovy
 - name: Docker, Docker-Compose, DockerSwarm, Kubernetes and Openshift
-- name: "CI/CD: Jenkins,Github Actions"
+- name: "CI/CD: Jenkins,Github Actions, ArgoCD, Tekton"
 - name: Pentesting, Social Enginering, Nmap, Wireshark, Kali Linux Tools, Penetration testing OSINT Tools
 - name: Experience configuring NGINX, Apache, Redis, SSL and TLS certificates, PostgresSQL
 - name: LDAP and Active Directory

@@ -115,11 +115,12 @@
               :class="{ link: experience.website !== undefined}"
               :href="experience.website">
 
-              <span class="section-content__header">{{ experience.position }}</span>
               <span class="section-content__subheader">
+                
                 {{ experience.company }}
                 <span class="section-content__plain">{{ experience.location }}</span>
               </span>
+              <span class="section-content__header">{{ experience.position }}</span>
 
               <div class="section-content__text">{{ experience.timeperiod }}</div>
               <span class="section-content__text--light">{{ experience.description }}</span>
@@ -358,21 +359,22 @@ export default Vue.component(name, getVueOptions(name));
 
   &__header {
     display: block;
-    font-size: 13px;
+    font-size: 10px;
     font-weight: 500;
+    color: #34495E;
   }
 
   &__subheader {
     display: block;
-    font-size: 10px;
-    
+    font-size: 12px;
+    color: #34495E;
     font-weight: bold;
   }
 
   &__plain,
   &__text {
     display: block;
-    font-size: 12px;
+    font-size: 10px;
 
     &--light {
       font-size: 10px;

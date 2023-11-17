@@ -58,11 +58,20 @@ experience:
 
 - company: Kyndryl (Startup by IBM)
   position: Senior DevOps Engineer / SRE Platform Engineer
-  timeperiod: September 2021 - now
+  timeperiod: September 2021 - October 2023
   description: Management, monitoring, logging, alert and administration of the tools used within the life cycle of the
                   applications and the platform, the tools used are all Prometheus Stack and Elastic Stack. Also provisioning all the infraestructure from DevOps Department with Ansible and managing the same
                   with K8s and Openshift.
   website: https://kyndryl.com/
+
+- company: BME | Bolsas y Mercados Españoles
+  position: System Engineer
+  timeperiod: October 2023 - now
+  description: Management, monitoring (Grafana, Prometheus), logging (Splunk), alert (Alertmanager) and administration of the different API through Kong API Gateway.
+               Managing the this applications inside Openshift.
+               Keys secret Management with Vault and follow the GitOps lyfecycle with ArgoCD and Helm 
+  website: https://www.bolsasymercados.es/esp/Home
+
 education:
 - degree: MASTER SECURITY INFORMATION
   timeperiod: November 2019 - July 2020

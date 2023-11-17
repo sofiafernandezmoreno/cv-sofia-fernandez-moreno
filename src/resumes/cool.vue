@@ -3,7 +3,7 @@
     <div class="banner">
       <div class="banner__fullname">{{ person.name.first }} {{ person.name.middle }} {{ person.name.last }}</div>
       <div class="banner__position">{{ person.position }}</div>
-      <div v-if="person.birth" class="banner__location">{{ lang.born }} {{person.birth.year}} {{ lang.bornIn }} {{person.birth.location}}</div>
+      <div v-if="person.birth" class="banner__location">{{person.birth.location}}</div>
     </div>
 
     <div class="content">
@@ -89,7 +89,15 @@
               :href="contactLinks.medium">
               <i class="section-link__icon fa fa-medium"></i>{{ person.contact.medium }}
             </a>
+
+
+
           </div>
+            <div>
+            <br>
+            <br>
+            <img class="frame"/>
+            </div>
         </div>
       </div>
 
@@ -107,11 +115,12 @@
               :class="{ link: experience.website !== undefined}"
               :href="experience.website">
 
-              <span class="section-content__header">{{ experience.position }}</span>
               <span class="section-content__subheader">
+                
                 {{ experience.company }}
                 <span class="section-content__plain">{{ experience.location }}</span>
               </span>
+              <span class="section-content__header">{{ experience.position }}</span>
 
               <div class="section-content__text">{{ experience.timeperiod }}</div>
               <span class="section-content__text--light">{{ experience.description }}</span>
@@ -153,20 +162,17 @@
               :class="{ link: project.url !== undefined}"
               :href="project.url">
               <span class="section-content__header"> {{ project.name }} </span>
-              <span class="section-content__subheader">{{ project.platform }}</span>
-              <span class="section-content__text"> {{ project.description }} </span>
             </a>
           </div>
         </div>
-
         <div
           v-if="person.contributions"
           class="section">
           <div class="section-headline">
-            <i class="section-headline__icon fa fa-heart"></i>{{lang.contributions}}
+            <i class="section-headline__icon fa fa-certificate"></i>{{lang.contributions}}
           </div>
 
-          <div class="section-content-grid">
+          <div class="section-content">
             <a
               v-for="(contribution, index) in person.contributions"
               class="section-content__item-grid"
@@ -174,12 +180,31 @@
               :class="{ link: contribution.url !== undefined}"
               :href="contribution.url">
               <span class="section-content__header"> {{ contribution.name }} </span>
-              <span class="section-content__text"> {{ contribution.description }} </span>
-              <span class="section-content__text--light" style="word-break: break-all;">
                 {{ contribution.url }}
               </span>
             </a>
           </div>
+        <div
+          v-if="person.languages"
+          class="section">
+          <div class="section-headline">
+            <i class="section-headline__icon fa fa-language"></i>{{ lang.languages }}
+          </div>
+
+          <div class="section-content-grid">
+            <a v-for="(languages, index) in person.languages" :key="index"
+              class="section-content__item-grid"
+              :class="{ link: languages.url !== undefined}"
+              :href="languages.url">
+              <span class="section-content__header"> {{ languages.name }} </span>
+              <span class="section-content__subheader">{{ languages.platform }}</span>
+              <span class="section-content__text"> {{ languages.description }} </span>
+            </a>
+          </div>
+        </div>
+
+
+
         </div>
       </div>
     </div>
@@ -199,7 +224,7 @@ export default Vue.component(name, getVueOptions(name));
 
 <style lang="less" scoped>
 @accent-color: #34495E;
-@banner-color: #42b883;
+@banner-color: #F47B8F;
 @banner-height: 120px;
 @picture-size: 120px;
 @picture-offset: 35px;
@@ -232,6 +257,15 @@ export default Vue.component(name, getVueOptions(name));
   border: 5px solid @accent-color;
   content: url('../../resume/id.jpg');
   z-index: 2;
+}
+
+.frame {
+  justify-content: center;
+  align-items: center;
+  height: @picture-size;
+  width: @picture-size;
+  margin-left: 51px;
+  content: url('../../resume/frame.png');
 }
 
 .banner {
@@ -286,7 +320,7 @@ export default Vue.component(name, getVueOptions(name));
 }
 
 .section {
-  margin: 20px 0;
+  margin: 1px 0;
 }
 
 .section-link,
@@ -295,8 +329,8 @@ export default Vue.component(name, getVueOptions(name));
   align-items: center;
   color: @accent-color;
   display: inline-block;
-  font-size: 1.2em;
-  margin: 8px 0;
+  font-size: 1.0em;
+  margin: 2px 0;
 
   &__icon {
     margin-right: 8px;
@@ -309,38 +343,41 @@ export default Vue.component(name, getVueOptions(name));
   color: rgba(255, 255, 255, 0.59) !important;
 
   &__icon {
-    color: white;
+    color: #F47B8F;
   }
 }
 
 .section-content {
-  margin-top: 5px;
+  margin-top: 0.5px;
   padding-left: 32px;
   font-size: 14px;
 
   &__item {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
   }
 
   &__header {
     display: block;
-    font-size: 1.1em;
+    font-size: 10px;
     font-weight: 500;
+    color: #34495E;
   }
 
   &__subheader {
     display: block;
-    font-weight: 400;
+    font-size: 12px;
+    color: #34495E;
+    font-weight: bold;
   }
 
   &__plain,
   &__text {
     display: block;
-    font-size: 12px;
+    font-size: 10px;
 
     &--light {
-      font-size: 12px;
+      font-size: 10px;
     }
   }
 
@@ -357,6 +394,7 @@ export default Vue.component(name, getVueOptions(name));
 
   &--plain {
     padding: 0;
+    font-size: 13px;
   }
 }
 
@@ -373,9 +411,10 @@ export default Vue.component(name, getVueOptions(name));
 
 .squarred-grid-item {
   display: block;
-  border: 1px solid white;
+  border: 1px solid #F47B8F;
   color: white;
   margin-top: 5px;
   padding: 5px;
+  font-size: 12.3px;
 }
 </style>

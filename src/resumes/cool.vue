@@ -179,10 +179,8 @@
               :key="index"
               :class="{ link: contribution.url !== undefined}"
               :href="contribution.url">
-              <span class="section-content__header"> {{ contribution.name }} </span>
-                {{ contribution.url }}
-              </span>
-            </a>
+              <span class="section-content__header"> {{ contribution.name }} </span>             {{ contribution.url }}
+              </span></a>
           </div>
         <div
           v-if="person.languages"
@@ -190,7 +188,6 @@
           <div class="section-headline">
             <i class="section-headline__icon fa fa-language"></i>{{ lang.languages }}
           </div>
-
           <div class="section-content-grid">
             <a v-for="(languages, index) in person.languages" :key="index"
               class="section-content__item-grid"
@@ -350,7 +347,7 @@ export default Vue.component(name, getVueOptions(name));
 .section-content {
   margin-top: 0.5px;
   padding-left: 32px;
-  font-size: 14px;
+  font-size: 12px;
 
   &__item {
     display: block;
@@ -388,8 +385,8 @@ export default Vue.component(name, getVueOptions(name));
 
   &__item-grid {
     flex: 1 1 0;
-    margin-bottom: 5px;
-    padding-right: 5px;
+    margin-bottom: 2px;
+    padding-right: 2px;
   }
 
   &--plain {
@@ -401,8 +398,8 @@ export default Vue.component(name, getVueOptions(name));
 .section-content-grid {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 .grid-item {

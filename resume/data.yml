@@ -7,7 +7,7 @@ name:
   last: Moreno
 about: Hi, my name is Sofía Fernández Moreno. I'm just about the most boring type of person you could possibly imagine. I like collecting logs with SIEM
        monitoring and living in the new era of the Cloud. I am not a robot. Please hire me.
-position: Senior DevOps Engineer / SRE Platform
+position:  DevOps Engineer / System Engineer
 
 
 birth:
@@ -85,39 +85,39 @@ education:
 
 # skill level goes from 0 to 100
 skills:
-- name: Bash, Python, C++, Ruby, Groovy
-- name: Docker, Docker-Compose, DockerSwarm, Kubernetes and Openshift
-- name: "CI/CD: Jenkins,Github Actions, ArgoCD, Tekton"
+- name: Bash, Python, Go, C++, Ruby, Groovy
+- name: Docker, Docker-Compose, Kubernetes and Openshift
+- name: "Terraform, Helm, Kustomize"
+- name: "CI/CD: Gitlab CI, Jenkins,Github Actions, ArgoCD"
 - name: Pentesting, Social Enginering, Nmap, Wireshark, Kali Linux Tools, Penetration testing OSINT Tools
-- name: Experience configuring NGINX, Apache, Redis, SSL and TLS certificates, PostgresSQL
+- name: Experience configuring NGINX, Apache, Redis, SSL and TLS certificates, Vault secrets
+- name: "Databases: PostgresSQL, MongoDB, MySQL, MariaDB and Redis"
 - name: LDAP and Active Directory
 - name: "Cloud: GCP, Azure, AWS, IBM Cloud"
-- name: Logging, Event Streams and Monitoring (ELK, Apache Kafka and Prometheus)
+- name: "OpenID Connect, OAuth2, SAML, Keycloak"
+- name: Logging, Event Streams and Monitoring (ELK, Apache Kafka and Prometheus/Grafana)
 
 knowledge: Also proficient in developing CI/CD pipelines, Configuration Management Tools and deployments over large infrastructure.
 
 
-projects:
-- name: Análisis y monitorización de aplicaciones a través de plugins con Naemon
-  platform: Docker-Compose
-  url: https://github.com/sofiafernandezmoreno/TFG
-- name: Security System
-  platform: Arduino
-  url: https://github.com/sofiafernandezmoreno/Arduino-Seguridad
-- name: DDoS Attacks
-  platform: Docker-Compose
-  url: https://github.com/sofiafernandezmoreno/TFM_DDoS_Resillience
-
+# projects:
+# - name: Análisis y monitorización de aplicaciones a través de plugins con Naemon
+#   platform: Docker-Compose
+#   url: https://github.com/sofiafernandezmoreno/TFG
+# - name: Security System
+#   platform: Arduino
+#   url: https://github.com/sofiafernandezmoreno/Arduino-Seguridad
+# - name: DDoS Attacks
+#   platform: Docker-Compose
+#   url: https://github.com/sofiafernandezmoreno/TFM_DDoS_Resillience
 
 
 contributions:
 - name: Course of computer forensics
 - name: Certified Kubernetes Administrator (CKA)
 
-
-
 languages:
-- name: English (B1) 
+- name: English (B2) 
 - name: French (A2) 
 - name: Spanish (Native) 
 
